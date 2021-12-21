@@ -1,0 +1,76 @@
+.button
+    width: 144px
+    height: 48px
+    background-color: #f4b02b
+    text-transform: uppercase
+    font-size: 16px
+    text-align: center
+    border-radius: 3px
+    color: #fff
+    display: block
+    cursor: pointer
+    font-weight: 700
+    border: none
+    &_transparent
+        background-color: rgba(0, 0, 0, 0)
+        border: 2px solid #F4B02B
+        color:#1F271B
+        position: relative
+        overflow: hidden
+        &::after
+            content: ' '
+            display: block
+            width: 170px
+            height: 200px
+            background-color: #f4b02b
+            position: absolute
+            left: -130%
+            top: -110%
+            transform: rotate(-20deg)
+            transition: 0.3s
+            z-index: -1
+        &:hover
+            color: #fff
+            &::after
+                left: 0
+    &_blur
+        width: 116px
+        height: 43px
+        background-color: rgba(255, 255, 255, 0.11)
+        border: 1px solid rgba(255, 255, 255, 0.2)
+        backdrop-filter: blur(8px)
+        font-size: 14px
+        &:hover
+            border: 1.5px solid #fff
+        
+    &_mini
+        width: 105px
+        height: 40px
+        font-weight: 700
+        font-size: 11px
+        border: none
+        &:hover
+            border: solid 3px #fff    
+    &_subscribe
+        width: 190px
+        height: 69px
+        text-transform: none
+        border: none
+    &_contact
+        width: 765px
+        height: 60px
+        background-color: $main-color
+        text-transform: capitalize
+        color: #fff
+        font-weight: 600
+        font-size: 16px
+        border: none
+        margin-top: 25px
+    &_product1
+        width: 165px
+        height: 50px
+        font-weight: 500
+    &_product2
+        width: 135px
+        height: 50px
+        font-weight: 500
