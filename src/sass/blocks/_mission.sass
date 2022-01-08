@@ -1,0 +1,33 @@
+@import "../base/mixins"
+.mission
+    padding-bottom: 280px
+.mission-wrapper
+    padding-left: 70%
+    padding-top: 235px
+    position: relative
+    padding-bottom: 285px
+.mission__screen
+    transform: rotateZ(90deg)
+    width: 45%
+    position: absolute
+    top: -5%
+    left: -8%
+    img
+        border-radius: 54px
+
+.mission__title
+    position: relative
+    &::before
+        content: ''
+        width: 85px
+        height: 85px
+        border-radius: 50%
+        background-color: #F101BF
+        opacity: 0.9
+        filter: blur(50px)
+        position: absolute
+        right: 80px
+        top: 20px
+        z-index: -1
+.mission__descr
+    margin-top: 25px

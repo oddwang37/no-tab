@@ -6,21 +6,40 @@
 body
     font-family: 'Noto Sans', 'Arial', sans-serif
     background-color: #000
+    color: #fff
+    font-size: 18px
 h1,
 h2,
 h3
     font-family: 'Montserrat', 'Arial', sans-serif
 .container 
     width: 1160px
-    margin: 0 auto
+    margin-left: 7%
+    margin-right: 12%
+    &_center
+        margin: 0 auto
+    &_mr14p
+        margin-right: 14%
 .display-none
     display: none
 a
     text-decoration: none
+img
+    width: 100%
 
 @import "libs/animations"
 @import "base/mixins"
 @import "base/variables"
 @import "blocks/buttons"
+@import "blocks/text"
 @import "blocks/header"
 @import "blocks/promo"
+@import "blocks/become-partners"
+@import "blocks/mission"
+@import "blocks/scanner"
+@import "blocks/bi-tool"
+@import "blocks/qr-code"
+@import "blocks/easier"
+@import "blocks/forms"
+@import "blocks/contact"
+@import "blocks/footer"

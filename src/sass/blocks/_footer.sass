@@ -1,40 +1,35 @@
-.footer-img
-    width: 100%
-    height: 264px
-    background: url('../img/footer-bg.png')
-
 .footer
-    min-height: 416px
-    padding-top: 75px
-    padding-bottom: 75px
-    background-color:#202020
-    &__wrapper
-        display: flex
-        justify-content: space-between
-    &__logo
-        font-weight: 700
-        font-size: 19px
-        text-transform: uppercase
-        color: #fff
-    &__nav
-        margin-top: 45px
-        &-list
-            list-style-type: none
-        &-item
-            font-weight: 500
-            font-size: 16px
-            text-transform: uppercase
-            margin-bottom: 14px
-            color: #fff
-    &__rights
-        margin-top: 34px
-        color: rgba(255, 255, 255, 0.33)
-        font-weight: 500
-        font-size: 16px
-    &__subscribe-label
-        font-size: 16px
-        font-weight: 500
-        color: #fff
-        margin-bottom: 23px
-        
-
+    padding-bottom: 90px
+    font-family: 'Avenir', 'Arial', sans-serif
+    font-weight: 500
+    background: url('../img/footer/bg.png') 0 0 no-repeat
+    position: relative
+    &::before
+        content: ''
+        width: 400px
+        height: 400px
+        background: linear-gradient(12.08deg, #F101BF 2.82%, #0066FF 97.06%)
+        opacity: 0.7
+        filter: blur(250px)
+        transform: rotate(5.78deg)
+        position: absolute
+        bottom: 10px
+        left: -40px
+        z-index: -1
+.footer-wrapper
+    @include flex-space-btw
+.footer__title
+    width: 80px
+.footer__email
+    margin-top: 15px
+.footer__link
+    margin-top: 10px
+    display: block
+    color: #fff
+    font-weight: 800
+.footer__copyright
+    margin-top: 20px
+    font-weight: 800
+.footer-documents__item
+    color: #fff
+    font-weight: 800
