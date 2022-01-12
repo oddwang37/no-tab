@@ -8,28 +8,63 @@
     width: 35%
     @include flex-space-btw
     align-items: center
+    @media (max-width: 375.1px)
+        width: 100%
 .header__logo
     width: 50%
     @include flex-space-btw
     align-items: center
+    @media (max-width: 375.1px)
+        width: 105px
 .header-logo
     &__img
         width: 45%
+        @media (max-width: 375.1px)
+            width: 51px
     &__text
         width: 50%
         font-size: 30px
         font-family: 'Montserrat', 'Arial', sans-serif
         font-weight: 700
+        @media (max-width: 375.1px) 
+            font-size: 16px
 .header__login
     width: 22%
     @include flex-space-btw
     align-items: center
+    @media (max-width: 375.1px)
+        width: 38px
 .header-login
+    &:hover
+        .header-login__text
+            color: #afafaf
+        @media (max-width: 375.1px)
+            color: #fff
     &__icon
         width: 30%
+        @media (max-width: 375.1px)
+            display: none
     &__text
         width: 60%
         text-decoration: underline
+        text-shadow: #000 1px 0px, #000 1px 1px, #000 0px 1px, #000 -1px 1px, #000 -1px 0px, #000 -1px -1px, #000 0px -1px, #000 1px -1px
+        position: relative
+        @media (max-width: 375.1px)
+            text-decoration: none
+            width: 38px
+            &:hover
+                color: #fff
+            &::after
+                content: ''
+                display: block
+                width: 40px
+                height: 0.5px
+                background-color: #fff
+                position: absolute
+                left: 0
+                bottom: -6px
+
+                
 
 
 

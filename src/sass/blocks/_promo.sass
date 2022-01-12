@@ -1,23 +1,42 @@
 .promo
     background: url('../img/promo/bg.png') 0 0/contain no-repeat
     padding-bottom: 25px
+    @media (max-width: 375.1px)
+        background: url(../img/promo/bg-mobile.png) 0 0/contain no-repeat
 .promo-wrapper
     @include flex-space-btw
     padding-top: 150px
+    @media (max-width: 375.1px)
+        display: block
 .promo__info
     width: 55%
     padding-top: 125px
+    @media (max-width: 375.1px)
+        width: 240px
+        padding: 0
+        
 .promo__title
     font-size: 64px
+    @media (max-width: 375.1px)
+        font-size: 35px
 .promo__text
     margin-top: 130px
     margin-left: 110px
     width: 60%
     font-size: 20px
+    @media (max-width: 375.1px)
+        margin-left: 0
+        margin-top: 24px
+        width: 245px
+        font-size: 16px
 .promo__screen
     width: 28%
-.promo__img
-    border-radius: 52px
+    @media (max-width: 375.1px)
+        display: none
+        position: absolute
+        width: 161px
+        top: 120px
+        right: -58px
 
 
 // Download 
@@ -27,14 +46,29 @@
     align-items: center
     margin-top: 85px
     width: 100%
+    flex-wrap: wrap
+        
 .promo-download__title
     font-family: 'Montserrat', 'Arial', sans-serif
     font-weight: 700
     font-size: 35px
     text-transform: uppercase
+    @media (max-width: 375.1px)
+        font-size: 24px
+        margin: 0 auto
+        margin-bottom: 35px
 .promo-links
     @include flex-space-btw
     align-items: center
     width: 33%
+    flex-wrap: wrap
+    @media (max-width: 375.1px)
+        width: 100%
+        justify-content: center
+    
+@media (max-width: 375.1px) 
+    .promo-links__item
+        width: 185px
+        margin-bottom: 25px
 
  

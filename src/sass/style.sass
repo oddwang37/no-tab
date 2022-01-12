@@ -8,6 +8,9 @@ body
     background-color: #000
     color: #fff
     font-size: 18px
+    position: relative
+    @media (max-width: 375.1px)
+        font-size: 16px
 h1,
 h2,
 h3
@@ -20,17 +23,29 @@ h3
         margin: 0 auto
     &_mr14p
         margin-right: 14%
+        @media (max-width: 375.1px)
+            margin: 0 auto
+    @media (max-width: 375.1px)
+        width: 345px
+        margin: 0 auto 
 .display-none
     display: none
 a
     text-decoration: none
+    color: #fff
+    &:visited
+        color: #fff
+    &:active
+        color: #fff
 img
     width: 100%
+
 
 @import "libs/animations"
 @import "base/mixins"
 @import "base/variables"
 @import "blocks/buttons"
+@import "blocks/cookies"
 @import "blocks/text"
 @import "blocks/header"
 @import "blocks/promo"
@@ -43,3 +58,4 @@ img
 @import "blocks/forms"
 @import "blocks/contact"
 @import "blocks/footer"
+

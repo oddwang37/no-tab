@@ -6,10 +6,44 @@
     font-family: 'Montserrat', 'Arial', sans-serif
     font-size: 24px
     cursor: pointer
-    &_black
-        background-color: #000
+    position: relative
+    &_transparent
+        background-color: rgba(0, 0, 0, 0)
         border: 1px solid #fff
         color: #fff
         text-transform: capitalize
         margin: 0 auto
         margin-top: 60px
+        overflow: hidden
+        &::after
+            content: ''
+            width: 330px
+            height: 150px
+            position: absolute
+            background: linear-gradient(12.08deg, #F101BF 2.82%, #0066FF 97.06%)
+            opacity: 0.5
+            left: -340px
+            bottom: 0
+            transition: 0.5s all
+            z-index: -1
+            filter: blur(10px)
+        &:hover
+            &::after
+                left: -10px
+        @media (max-width: 375.1px)
+            width: 100%
+            height: 80px
+            background-color: rgba(0, 0, 0, 0)
+            margin-top: 40px
+            &:hover
+                &::after
+                    left: -350px
+    &_gray
+        background-color: rgba(255, 255, 255, 0.1)
+        width: 132px
+        height: 50px
+        border: 0.5px solid #fff
+        color: #fff
+        font-size: 14px
+        @media (max-width: 375.1px)
+            width: 92px

@@ -2,24 +2,28 @@
     padding-bottom: 90px
     font-family: 'Avenir', 'Arial', sans-serif
     font-weight: 500
-    background: url('../img/footer/bg.png') 0 0 no-repeat
-    position: relative
-    &::before
-        content: ''
-        width: 400px
-        height: 400px
-        background: linear-gradient(12.08deg, #F101BF 2.82%, #0066FF 97.06%)
-        opacity: 0.7
-        filter: blur(250px)
-        transform: rotate(5.78deg)
-        position: absolute
-        bottom: 10px
-        left: -40px
-        z-index: -1
+    background-color: rgba(0, 0, 0, 0)
+    position: absolute
+    bottom: 0
+    left: 50%
+    transform: translateX(-50%)
+    @media (max-width: 375.1px)
+        padding-bottom: 24px
+        width: 100%
 .footer-wrapper
     @include flex-space-btw
+    @media (max-width: 375.1px)
+        flex-direction: column-reverse
+        text-align: center
+.footer-left 
+    @media (max-width: 375.1px)
+        margin-top: 60px
+    
 .footer__title
+    display: block
     width: 80px
+    @media (max-width: 375.1px)
+        margin: 0 auto
 .footer__email
     margin-top: 15px
 .footer__link
@@ -27,9 +31,22 @@
     display: block
     color: #fff
     font-weight: 800
+    @media (max-width: 375.1px)
+        margin-top: 0
+        display: inline
+        margin-left: 3px
 .footer__copyright
     margin-top: 20px
     font-weight: 800
+    @media (max-width: 375.1px)
+        margin-top: 10px
 .footer-documents__item
     color: #fff
     font-weight: 800
+    &:hover
+        text-decoration: underline
+    @media (max-width: 375.1px)
+        font-size: 18px
+        &:hover
+            text-decoration: none
+
