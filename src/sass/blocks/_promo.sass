@@ -11,6 +11,7 @@
 .promo__info
     width: 55%
     padding-top: 125px
+    position: relative
     @media (max-width: 375.1px)
         width: 240px
         padding: 0
@@ -32,11 +33,17 @@
 .promo__screen
     width: 28%
     @media (max-width: 375.1px)
-        display: none
-        position: absolute
+        position: absolute 
         width: 161px
-        top: 120px
-        right: -58px
+        top: 80px
+        right: 0
+.promo__img
+    @media (max-width: 375.1px)
+        display: none
+.promo__img_mobile
+    display: none
+    @media (max-width: 375.1px)
+        display: block
 
 
 // Download 
@@ -64,6 +71,7 @@
     flex-wrap: wrap
     @media (max-width: 375.1px)
         width: 100%
+        flex-direction: column
         justify-content: center
     
 @media (max-width: 375.1px) 
