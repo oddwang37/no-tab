@@ -1,4 +1,5 @@
 const slides = document.querySelectorAll('.slide'),
+    buttons = document.querySelectorAll('button'),
     prev = document.querySelector('#leftArrow'),
     next = document.querySelector('#rightArrow'),
     sliderWrapper = document.querySelector('.slider-wrapper'),
@@ -18,9 +19,8 @@ sliderInner.append(firstClone);
 
 showActiveNav();
 
-let offset = 0;
-let allowAnim = true,
-    currentSlide = 0;
+let currentSlide = 0;
+let buttonsEnabled = true;
 
 sliderInner.style.width = 100 * (slides.length + 2) + '%';
 sliderInner.style.left = `-${width}px`;
@@ -38,11 +38,13 @@ next.addEventListener('click', () => {
     firstPos = lastPos;
     lastPos+=width;
     if (sliderInner.style.transform == `translateX(-${width * (slidesLength-1)}px)`) {
+        disableButtons();
         const nextAnim = setInterval(() => {
             firstPos+=10;
             sliderInner.style.transform = `translateX(-${firstPos}px)`;
             if (firstPos >= lastPos) {
                 clearInterval(nextAnim);
+                enableButtons();
                 sliderInner.style.transform = `translateX(0px)`;
                 lastPos = 0;
             }
@@ -60,6 +62,7 @@ prev.addEventListener('click', () => {
     lastPos-=width;
     if (sliderInner.style.transform == 'translateX(0px)' ||
     window.getComputedStyle(sliderInner).transform == 'none') {
+        disableButtons();
         const prevAnim = setInterval(() => {
             firstPos-=10;
             sliderInner.style.transform = `translateX(${-firstPos}px)`;
@@ -67,6 +70,7 @@ prev.addEventListener('click', () => {
                 clearInterval(prevAnim);
                 sliderInner.style.transform = `translateX(-${width * (slidesLength - 1)}px)`;
                 lastPos = width * (slidesLength - 1);
+                enableButtons();
             }
         }, 10)
         currentSlide = slidesLength - 1;
@@ -97,6 +101,19 @@ navWrapper.addEventListener('click', (e) => {
     }
 })
 
+function enableButtons() {
+    buttons.forEach(item => {
+        item.disabled = false;
+    })
+}
+
+function disableButtons() {
+    buttons.forEach(item => {
+        item.disabled = true;
+    })
+}
+
+
 function hideActiveNav() {
     navItems.forEach(item => {
         item.classList.remove('nav-item__active');
@@ -108,6 +125,7 @@ function showActiveNav(i = 0) {
 }
 
 function shiftSlide(first, last) {
+    disableButtons();
     let step = 10;
     if (first < last) {
         if (last - first > 1200) {step = 30} else
@@ -117,6 +135,7 @@ function shiftSlide(first, last) {
             sliderInner.style.transform = `translateX(-${first}px)`;
             if (first >= last) {
                 clearInterval(forwardAnim);
+                enableButtons();
             }
         }, 10)
         currentSlide++;
@@ -128,6 +147,7 @@ function shiftSlide(first, last) {
             sliderInner.style.transform = `translateX(${-first}px)`;
             if (first <= last) {
                 clearInterval(backwardAnim);
+                enableButtons();
             }
         }, 10)
         currentSlide--;
