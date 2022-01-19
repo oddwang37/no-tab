@@ -47,22 +47,32 @@ svg:hover {
 }
 
 .slide {
-    background-color: #c1a8ff;
     height: 400px;
 }
 
-.slide:nth-child(2) {
-    background-color: #5817ff
+.nav {
+    display: flex;
+    justify-content: space-between;
+    width: 12%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -30px;
 }
 
-.slide:nth-child(3) {
-    background-color: #7400d4
+.nav-item {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: .5s all;
 }
 
-.slide:nth-child(4) {
-    background-color: #522a73
+.nav-item:hover {
+    background-color: #ffffffa8;
 }
 
-.slide:nth-child(5) {
-    background-color: #9f25ba
+.nav-item__active {
+    background-color: rgba(165, 165, 165, 0.788);
 }
