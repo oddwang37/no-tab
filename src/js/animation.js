@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function missionAnimation() {
         let posPhoneLeft = -8,
-            posPhoneTop = -5,
+            posPhoneTop = 1435,
             posTextX = 0,
             deg = 90;
 
@@ -51,9 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         function phoneToBottom() {
-            posPhoneTop++;
-            missionPhone.style.top = `${posPhoneLeft}%`;
-            if (posPhoneTop >= 18) {
+            posPhoneTop+=50;
+            missionPhone.style.top = `${posPhoneTop}px`;
+            if (posPhoneTop >= 1550) {
                 clearInterval(toBottom);
             }
         }
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 item.style.transform = `translateX(${posTextX}px)`;
                 item.classList.add('fadeOut');
             })
-            if (posTextX > 500) {
+            if (posTextX > 800) {
                 clearInterval(textRight);
             }
         }
