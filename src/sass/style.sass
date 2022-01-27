@@ -11,7 +11,7 @@ body
     position: relative
     scroll-behavior: smooth
     cursor: default
-    @media (max-width: 375.1px)
+    @media (max-width: 768.1px)
         font-size: 16px
 h1,
 h2,
@@ -25,13 +25,13 @@ h3
         margin: 0 auto
     &_mr14p
         margin-right: 14%
-        @media (max-width: 375.1px)
-            margin: 0 auto
+    @media (max-width: 1200.1px) and (min-width: 576.11px)
+        width: auto
+    @media (max-width: 576.1px)
+        margin: 0 auto
+        width: 95%
     @media (max-width: 375.1px)
         width: 345px
-        margin: 0 auto 
-    @media (max-width: 1024.1px) and (min-width: 375.1px)
-        width: auto
 .display-none
     display: none
 a

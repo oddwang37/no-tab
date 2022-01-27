@@ -1,17 +1,21 @@
 .scanner
-    background: url('../img/id-scanner/bg.png') 0 0/contain no-repeat
+    background: url('../img/id-scanner/bg.png') center center/cover no-repeat
     padding-top: 470px
-    @media (max-width: 375.1px)
-        padding-top: 215px
+    @media (max-width: 768.1px)
+        padding-top: 320px
+    @media (max-width: 576.1px)
+        padding-top: 250px
 .scanner-wrapper
     @include flex-space-btw
     flex-wrap: wrap
-    @media (max-width: 375.1px)
+    @media (max-width: 768.1px)
         flex-direction: column-reverse
 .scanner__screens
     width: 60%
     @include flex-space-btw
     flex-wrap: wrap
+    @media (max-width: 768.1px)
+        width: 100%
     @media (max-width: 375.1px)
         width: 100%
         margin-top: 70px
@@ -25,8 +29,11 @@
     width: 27%
     align-self: flex-end
     padding-bottom: 75px
+    @media (max-width: 768.1px)
+        width: 90%
+        padding-bottom: 20px
+        align-self: flex-start
     @media (max-width: 375.1px)
-        width: 100%
         padding: 0
 .scanner-info__descr
     margin-top: 24px

@@ -1,26 +1,26 @@
 .contact
     background: url('../img/get-in-touch/bg.png') center center/cover no-repeat
     padding-bottom: 365px
-    @media (max-width: 375.1px)
+    @media (max-width: 576.1px)
         padding-top: 42px
         padding-bottom: 290px
-        background: url('../img/get-in-touch/mobile-bg.png') 0 0 no-repeat
+        background: url('../img/get-in-touch/mobile-bg.png') 0 0/cover no-repeat
 .notab
     padding-top: 380px
-    @media (max-width: 375.1px)
+    @media (max-width: 576.1px)
         display: none
 .notab__img
     margin: 0 auto
     width: 76%
 .contact__title
     margin-top: 258px
-    @media (max-width: 375.1px)
+    @media (max-width: 576.1px)
         margin-top: 100px
 .contact__descr
     width: 50%
     margin: 24px auto 0 auto
-    @media (max-width: 375.1px)
-        width: 100%
+    @media (max-width: 576.1px)
+        width: 85%
 .contact__download-text
     font-size: 24px
     text-transform: uppercase 
@@ -33,15 +33,24 @@
     width: 53%
     margin: 0 auto
     flex-wrap: wrap
-    @media (max-width: 375.1px)
+    align-items: center
+    @media (max-width: 576.1px)
         margin-top: 20px
 .contact-download__item
-    @media (max-width: 375.1px)
+    @media (max-width: 576.1px)
         width: 185px
         margin-top: 24px
 
 .contact-download__item
     &:first-child
         width: 258px
+        @media (max-width: 996.1px)
+        width: 47%
+        @media (max-width: 576.1px)
+            width: 258px
     &:last-child
         width: 292px
+        @media (max-width: 996.1px)
+        width: 47%
+        @media (max-width: 576.1px)
+            width: 292px

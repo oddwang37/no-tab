@@ -1,13 +1,28 @@
 @import "../base/mixins"
 .mission
-    padding-bottom: 500px
-    @media (max-width: 375.1px)
+    padding-bottom: 235px
+    @media (max-width: 1200.1px)
+        padding-bottom: 250px
+    @media (max-width: 768.1px)
+        padding-bottom: 100px
+    @media (max-width: 576.1px)
         padding-bottom: 95px
 .mission-wrapper
     padding-left: 70%
     padding-top: 235px
     padding-bottom: 285px
-    @media (max-width: 375.1px) 
+    position: relative
+    @media (max-width: 1200.1px)
+        padding-top: 150px
+        padding-left: 60%
+    @media (max-width: 992.1px)
+        padding-top: 120px
+        padding-bottom: 100px
+    @media (max-width: 768.1px)
+        padding-top: 120px
+        padding-bottom: 80px
+        padding-left: 50%
+    @media (max-width: 576.1px) 
         padding-left: 0
         padding-top: 110px
         padding-bottom: 95px
@@ -15,15 +30,21 @@
     transform: rotateZ(90deg) 
     width: 30%
     position: absolute
-    top: 1435px
+    top: 35px
     left: 0
     transition: 1s all
-    @media (max-width: 375.1px) 
+    @media (max-width: 996.1px)
+        width: 35%
+    @media (max-width: 768.1px)
+        width: 45%
+        top: 30px
+        left: -120px
+    @media (max-width: 576.1px) 
         position: static
         width: 172px
         transform: none
         margin: 0 auto
-        margin-top: 163px
+        margin-top: 50px
         width: 80%
 .mission__title
     position: relative
@@ -39,7 +60,7 @@
         right: 80px
         top: 20px
         z-index: -1
-        @media (max-width: 375.1px)
+        @media (max-width: 576.1px)
             left: -10px
             top: -25px
 .mission__descr

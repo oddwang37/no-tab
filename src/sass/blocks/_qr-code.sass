@@ -2,15 +2,20 @@
     background: url('../img/qr-code/bg.png') top right/cover no-repeat
     padding-top: 225px
     padding-bottom: 190px
-    @media (max-width: 375.1px)
-        background: url('../img/qr-code/bg-mobile.png') 0 0/contain no-repeat
-        padding-top: 230px
+    @media (max-width: 768.1px)
+        padding-top: 300px
+    @media (max-width: 576.1px)
+        background: url('../img/qr-code/bg-mobile.png') 0 0/cover no-repeat
+        padding-top: 280px
 .qr-code-wrapper
     @include flex-space-btw
     height: 1090px
     width: 80%
     margin-left: 12%
-    @media (max-width: 375.1px)
+    @media (max-width: 996.1px)
+        justify-content: center
+        height: 650px
+    @media (max-width: 576.1px)
         width: 345px
         display: block
         height: auto
@@ -20,74 +25,114 @@
     width: 65%
     align-self: flex-start
     flex-wrap: wrap
-    @media (max-width: 375.1px)
+    @media (max-width: 1200.1px)
+        width: 82%
+    @media (max-width: 996.1px)
+        width: 65%
+    @media (max-width: 576.1px)
         width: 100%
         justify-content: center
 .qr-code__info
-    width: 376px
+    width: 55%
     align-self: flex-end
     padding-bottom: 30px
-    @media (max-width: 375.1px)
+    @media (max-width: 1200.1px)
+        width: 40%
+    @media (max-width: 996.1px)
+        width: 45%
+    @media (max-width: 768.1px)
         width: 100%
 .qr-code__descr
     width: 80%
-    @media (max-width: 375.1px)
+    @media (max-width: 1200.1px)
+        width: 100%
+    @media (max-width: 996.1px)
+        font-size: 16px
+    @media (max-width: 576.1px)
         width: 100%
 .qr-code-links
     margin-top: 60px
     @include flex-space-btw
-    @media (max-width: 375.1px)
-        flex-wrap: wrap
+    align-items: center
+    flex-wrap: wrap
+    @media (max-width: 1200.1px)
+        justify-content: center
+        margin-top: 15px
+    @media (max-width: 768.1px)
+        width: 85%
+        justify-content: space-between
+    @media (max-width: 576.1px)
+        flex-direction: column
+        margin: 0 auto
+        margin-top: 20px
     &__item
-        @media (max-width: 375.1px)
+        @media (max-width: 1200.1px)
+            margin-top: 15px
+            width: 80%
+        @media (max-width: 768.1px)
+            width: 47%
+        @media (max-width: 576.1px)
             margin-top: 50px
             width: 185px
             margin: 0 auto
             margin-bottom: 24px
 .qr-code__screen_1
     width: 42%
-    @media (max-width: 375.1px)
+    @media (max-width: 1200.1px)
+        margin-right: 50px
+        width: 45%
+    @media (max-width: 996.1px)
+        width: 200px
+        margin: 0 auto
+    @media (max-width: 768.1px)
+        width: 200px
+    @media (max-width: 576.1px)
         width: 280px
-        padding-top: 175px
+        margin-top: 450px
 .qr-code__screen_2
     align-self: flex-end
-    @media (max-width: 375.1px)
+    @media (max-width: 996.1px)
+        align-self: flex-start
+        width: 200px
+    @media (max-width: 768.1px)
+        margin-top: 20px
+        width: 200px
+    @media (max-width: 576.1px)
         width: 280px
         margin: 0 auto
-        margin-top: 50px
+        margin-top: 250px
 
 .qr-code-footer
     padding-top: 42px
-    @media (max-width: 375.1px)
+    @media (max-width: 1200.1px)
+        padding: 0 5%
+    @media (max-width: 576.1px)
+        margin-top: 400px
         display: flex
         flex-direction: column-reverse
 .qr-code-footer__screen
-    width: 332px
+    width: 28%
     margin: 0 auto
-    @media (max-width: 375.1px)
-        width: 181px
-        margin-top: 70px
-        position: relative
-        &::after
-            content: 'Scan QR-code'
-            width: 130px
-            position: absolute
-            bottom: -75px
-            right: -65px
-            font-size: 18px
-            font-weight: 700
-            font-family: 'Montserrat', 'Arial', sans-serif
+    @media (max-width: 996.1px)
+        width: 200px
+    @media (max-width: 768.1px)
+        margin-top: 50px
 .qr-code-footer-inner
     margin-top: 80px
     @include flex-space-btw
-    @media (max-width: 375.1px)
+    align-items: center
+    @media (max-width: 576.1px)
         display: block
 .qr-code-footer__title
     width: 32%
-    @media (max-width: 375.1px)
+    @media (max-width: 768.1px)
+        width: 40%
+    @media (max-width: 576.1px)
         width: 100%
 .qr-code-footer__descr
     width: 25%
-    @media (max-width: 375.1px)
+    @media (max-width: 768.1px)
+        width: 40%
+    @media (max-width: 576.1px)
         width: 100%
         padding-right: 28%

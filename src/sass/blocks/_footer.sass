@@ -7,22 +7,24 @@
     bottom: 0
     left: 50%
     transform: translateX(-50%)
-    @media (max-width: 375.1px)
+    @media (max-width: 1200.1px)
+        width: 85%
+    @media (max-width: 576.1px)
         padding-bottom: 24px
         width: 100%
 .footer-wrapper
     @include flex-space-btw
-    @media (max-width: 375.1px)
+    @media (max-width: 576.1px)
         flex-direction: column-reverse
         text-align: center
 .footer-left 
-    @media (max-width: 375.1px)
+    @media (max-width: 576.1px)
         margin-top: 60px
     
 .footer__title
     display: block
     width: 80px
-    @media (max-width: 375.1px)
+    @media (max-width: 576.1px)
         margin: 0 auto
 .footer__email
     margin-top: 15px
@@ -31,21 +33,21 @@
     display: block
     color: #fff
     font-weight: 800
-    @media (max-width: 375.1px)
+    @media (max-width: 576.1px)
         margin-top: 0
         display: inline
         margin-left: 3px
 .footer__copyright
     margin-top: 20px
     font-weight: 800
-    @media (max-width: 375.1px)
+    @media (max-width: 576.1px)
         margin-top: 10px
 .footer-documents__item
     color: #fff
     font-weight: 800
     &:hover
         text-decoration: underline
-    @media (max-width: 375.1px)
+    @media (max-width: 576.1px)
         font-size: 18px
         &:hover
             text-decoration: none

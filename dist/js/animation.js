@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    if (screen.width > 375.1) {
+    if (screen.width > 768) {
         window.addEventListener('scroll', animationTrigger);
     }
 
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function missionAnimation() {
         let posPhoneLeft = -8,
-            posPhoneTop = 1435,
+            posPhoneTop = 0,
             posTextX = 0,
             deg = 90;
 
@@ -51,11 +51,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         function phoneToBottom() {
-            posPhoneTop+=50;
+            posPhoneTop+=10;
             missionPhone.style.top = `${posPhoneTop}px`;
-            if (posPhoneTop >= 1550) {
+            if (posPhoneTop >= 200 && screen.width <= 1370) {
                 clearInterval(toBottom);
-            }
+            } else if (posPhoneTop >=120 && screen.width <= 996) {
+                clearInterval(toBottom)
+            } else if (posPhoneTop >= 350) {
+                        clearInterval(toBottom);
+                    }
+            
         }
 
         function textToRight() {
