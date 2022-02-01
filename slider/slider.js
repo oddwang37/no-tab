@@ -22,7 +22,8 @@ sliderInner.append(firstClone);
 //      Stylization   🎨   //
 
 sliderInner.style.width = 100 * (slides.length + 2) + '%';
-sliderInner.style.left = `-${width}px`;
+sliderInner.style.position = 'relative';
+sliderInner.style.left = '0px';
 sliderInner.style.display = 'flex';
 sliderWrapper.style.overflow = 'hidden';
 slides.forEach(slide => {
@@ -44,16 +45,16 @@ next.addEventListener('click', () => {
     initialPos = finalPos;
     finalPos+=width;
     // Проверка на последний слайд
-    if (sliderInner.style.transform == `translateX(-${width * (slidesLength-1)}px)`) {
+    if (sliderInner.style.left == `-${width * (slidesLength-1)}px`) {
         disableButtons();
         const nextAnim = setInterval(() => {
             initialPos+=10;
-            sliderInner.style.transform = `translateX(-${initialPos}px)`;
+            sliderInner.style.left = `-${initialPos}px`;
             if (initialPos >= finalPos) {
                 clearInterval(nextAnim);
                 enableButtons();
             // После завершения анимации переключаемся на оригинальный, не клонированный слайд
-                sliderInner.style.transform = `translateX(0px)`;
+                sliderInner.style.left = '0px';
                 finalPos = 0;
             }
         }, 10)
@@ -69,16 +70,16 @@ prev.addEventListener('click', () => {
     initialPos = finalPos;
     finalPos-=width;
     // Проверка на первый слайд 
-    if ((sliderInner.style.transform == 'translateX(0px)' ||
-    window.getComputedStyle(sliderInner).transform == 'none')) {
+    if ((sliderInner.style.left == '0px' ||
+    window.getComputedStyle(sliderInner).left == 'auto')) {
         disableButtons();
         const prevAnim = setInterval(() => {
             initialPos-=10;
-            sliderInner.style.transform = `translateX(${-initialPos}px)`;
+            sliderInner.style.left = `${-initialPos}px`;
             if (initialPos <= finalPos) {
                 clearInterval(prevAnim);
                 //После завершения анимации переключаемся на оригинальный, не клонированный слайд
-                sliderInner.style.transform = `translateX(-${width * (slidesLength - 1)}px)`;
+                sliderInner.style.left = `-${width * (slidesLength-1)}px`;
                 finalPos = width * (slidesLength - 1);
                 enableButtons();
             }
@@ -101,7 +102,7 @@ function shiftSlide(first, last) {
         if (last - first > 600) {step = 20};
         const forwardAnim = setInterval(() => {
             first+=step;
-            sliderInner.style.transform = `translateX(-${first}px)`;
+            sliderInner.style.left = `-${first}px`;
             if (first >= last) {
                 clearInterval(forwardAnim);
                 enableButtons();
@@ -113,7 +114,7 @@ function shiftSlide(first, last) {
         if (first - last > 600) {step = 20};
         const backwardAnim = setInterval(() => {
             first-=step;
-            sliderInner.style.transform = `translateX(${-first}px)`;
+            sliderInner.style.left = `${-first}px`;
             if (first <= last) {
                 clearInterval(backwardAnim);
                 enableButtons();
