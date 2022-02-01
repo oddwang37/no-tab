@@ -141,7 +141,6 @@ navWrapper.addEventListener('click', (e) => {
                 currentSlide = i;
                 initialPos = finalPos;
                 finalPos = slidesPos[i];
-                console.log(initialPos, finalPos);
                 shiftSlide(initialPos, finalPos);
             }
         })
