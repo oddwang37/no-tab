@@ -45,7 +45,7 @@ next.addEventListener('click', () => {
     initialPos = finalPos;
     finalPos+=width;
     // Проверка на последний слайд
-    if (sliderInner.style.left == `-${width * (slidesLength-1)}px`) {
+    if (isLastSlide()) {
         disableButtons();
         const nextAnim = setInterval(() => {
             initialPos+=10;
@@ -70,8 +70,7 @@ prev.addEventListener('click', () => {
     initialPos = finalPos;
     finalPos-=width;
     // Проверка на первый слайд 
-    if ((sliderInner.style.left == '0px' ||
-    window.getComputedStyle(sliderInner).left == 'auto')) {
+    if (isFirstSlide()) {
         disableButtons();
         const prevAnim = setInterval(() => {
             initialPos-=10;
@@ -90,6 +89,16 @@ prev.addEventListener('click', () => {
     }
     showActiveNav(currentSlide);
 });
+
+// ----------  First and last slide checking --------- //
+
+function isFirstSlide() {
+    return sliderInner.style.left == '0px' || window.getComputedStyle(sliderInner).left == 'auto';
+}
+
+function isLastSlide() {
+    return sliderInner.style.left == `-${width * (slidesLength-1)}px`;
+}
 
 //          Moving slides  <------ ------>//
 function shiftSlide(first, last) {
