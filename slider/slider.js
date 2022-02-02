@@ -146,11 +146,11 @@ navWrapper.addEventListener('click', (e) => {
     if (e.target && e.target.classList.contains('nav-item')) {
         navItems.forEach((item, i) => {
             if (e.target == item) {
-                showActiveNav(i);
-                currentSlide = i;
                 initialPos = finalPos;
                 finalPos = slidesPos[i];
                 shiftSlide(initialPos, finalPos);
+                showActiveNav(i);
+                currentSlide = i;
             }
         })
     }
@@ -159,12 +159,12 @@ navWrapper.addEventListener('click', (e) => {
 
 function hideActiveNav() {
     navItems.forEach(item => {
-        item.classList.remove('nav-item__active');
+        item.classList.remove('nav-item_active');
     })
 }
 function showActiveNav(i = 0) {
     hideActiveNav();
-    navItems[i].classList.add('nav-item__active');
+    navItems[i].classList.add('nav-item_active');
 }
 
 //                  Buttons      🆗       //
